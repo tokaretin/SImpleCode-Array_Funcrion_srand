@@ -1,6 +1,21 @@
 ﻿#include <iostream>
 #include <ctime>
 
+void numberToArr(int arr[], const int SIZE);
+void printNumber(int arr[], const int SIZE);
+
+int main()
+{
+    std::srand(std::time(nullptr)); // Initialize random seed
+
+    const int SIZE = 10;
+    int arr[SIZE];
+
+    numberToArr(arr, SIZE);
+    printNumber(arr, SIZE);
+
+}
+
 void numberToArr(int arr[], const int SIZE)
 {
     for (int i = 0; i < SIZE; i++)
@@ -18,17 +33,7 @@ void printNumber(int arr[], const int SIZE)
     }
 }
 
-int main()
-{
-    std::srand(std::time(nullptr)); // Initialize random seed
 
-    const int SIZE = 10;
-    int arr[SIZE];
-
-    numberToArr(arr, SIZE);
-    printNumber(arr, SIZE);
-
-}
 
 
 
